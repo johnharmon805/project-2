@@ -15,11 +15,3 @@ CREATE TABLE products_tb
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE user_tb
-(
-	id int NOT NULL AUTO_INCREMENT,
-    name varchar(255) NOT NULL,
-	username varchar(255) NOT NULL,
-    password varchar(255) NOT NULL,
-	PRIMARY KEY (id)
-);
