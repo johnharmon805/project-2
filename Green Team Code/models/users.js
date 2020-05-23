@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes){
-    var users = sequelize.define("user_tb", {
+    var Users = sequelize.define("Users", {
       uuid: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV1,
@@ -9,6 +9,6 @@ module.exports = function(sequelize, DataTypes){
       username: DataTypes.STRING,
       password: DataTypes.STRING,
     });
-    return users;
+    return Users;
   };
   
