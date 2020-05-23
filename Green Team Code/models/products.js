@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
-  var products = sequelize.define("products_tb", {
+  var Products = sequelize.define("Products", {
     uuid: {
       type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV1,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
     product_name: DataTypes.STRING,
@@ -13,5 +13,5 @@ module.exports = function(sequelize, DataTypes) {
     price: DataTypes.INTEGER,
     stock_quantity: DataTypes.INTEGER
   });
-  return products;
+  return Products;
 };

@@ -1,6 +1,6 @@
-INSERT INTO products_tb (product_name, product_description, product_category, essential, price, stock_quantity) VALUES ("Bounty", "Paper Towel", "Household", true, 12.99, 100)
+INSERT INTO products_tbs (product_name, product_description, product_category, essential, price, stock_quantity) VALUES ("Bounty", "Paper Towel", "Household", true, 12.99, 100)
 
-INSERT INTO products_tb (product_name, product_description, product_category, essential, price, stock_quantity) VALUES ("Charmin", "Toilet Paper", "Household", true, 15.99, 100)
+INSERT INTO products_tbs (product_name, product_description, product_category, essential, price, stock_quantity) VALUES ("Charmin", "Toilet Paper", "Household", true, 15.99, 100)
 
 INSERT INTO products_tb (product_name, product_description, product_category, essential, price, stock_quantity) VALUES ("Hand Sanitizer", "Hand Sanitizer", "Household", true, 7.99, 100)
 
