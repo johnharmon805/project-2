@@ -7,7 +7,7 @@ module.exports = function (app) {
       res.json(products)
     })
   })
-
+  // seeds the db with the bulkCreate method
   app.get('/bulk', function (req, res) {
     db.Products.bulkCreate([
       {
