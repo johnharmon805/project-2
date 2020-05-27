@@ -17,7 +17,9 @@ module.exports = function (sequelize, DataTypes) {
     essential: DataTypes.BOOLEAN,
     image_url: DataTypes.STRING,
     price: DataTypes.INTEGER,
-    stock_quantity: DataTypes.INTEGER
+    stock_quantity: DataTypes.INTEGER,
+    createdAt: new Date(),
+    updatedAt: new Date()
   })
   return Products
 }

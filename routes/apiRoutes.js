@@ -4,8 +4,6 @@ module.exports = function (app) {
   // Get all examples
   app.get('/api/products', function (req, res) {
     db.Products.findAll({}).then(function (products) {
-      console.log('Did this get request run successfully at all?')
-      console.log(products)
       res.json(products)
     })
   })
