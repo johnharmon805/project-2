@@ -1,6 +1,6 @@
 'use strict'
 // import { uuid } from 'uuid';
-var uuidv4 = require('uuid/v4')
+// var uuidv4 = require('uuid/v4')
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -10,7 +10,7 @@ module.exports = {
       //   defaultValue: Sequelize.UUIDV4,
       //   primaryKey: true
       // },
-      uuid: uuidv4(),
+      // uuid: uuidv4(),
       product_name: 'test_product_name',
       product_description: 'test_product_description',
       product_category: 'test_product_cat',
