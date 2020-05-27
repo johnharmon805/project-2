@@ -3,10 +3,10 @@ var db = require('../models')
 module.exports = function (app) {
   // Load index page
   app.get('/', function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.render('index', {
+    db.Products.findAll({}).then(function (dbProducts) {
+      res.render('Home', {
         msg: 'Welcome!',
-        examples: dbExamples
+        examples: dbProducts
       })
     })
   })
