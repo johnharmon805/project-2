@@ -1,13 +1,12 @@
 // Get references to page elements
 console.log('javascript loaded')
 $('#shop-products').on('click', function () {
-  window.location = '/api/products'
+  window.location = '/shop'
   // $.ajax({
-  //   url: 'api/products',
+  //   url: 'shop',
   //   method: 'GET'
   // }).then(function (productsResult) {
   //   console.log(productsResult)
-  //   window.location = '/api/products'
   // })
 })
 // THIS IS THE BOILER-PLATE JAVASCRIPT STUFF - WE CAN GET RID OF THIS AFTER
