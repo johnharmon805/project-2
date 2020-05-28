@@ -1,6 +1,8 @@
 require('dotenv').config()
 var express = require('express')
 var exphbs = require('express-handlebars')
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 
 var db = require('./models')
 
