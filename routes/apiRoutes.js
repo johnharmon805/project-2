@@ -1,14 +1,14 @@
 var db = require('../models')
 
 module.exports = function (app) {
-  app.get('/api/products', function (req, res) {
-    db.Products.findAll({}).then(function (products) {
-      console.log(JSON.stringify(products))
-      res.render('shop', {
-        data: JSON.stringify(products)
-      })
-    })
-  })
+  // app.get('/api/products', function (req, res) {
+  //   db.Products.findAll({}).then(function (products) {
+  //     console.log(JSON.stringify(products))
+  //     res.render('shop', {
+  //       data: JSON.stringify(products)
+  //     })
+  //   })
+  // })
   // seeds the db with the bulkCreate method
   app.get('/bulk', function (req, res) {
     db.Products.bulkCreate([

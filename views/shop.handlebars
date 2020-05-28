@@ -23,15 +23,11 @@
         </nav>
     </div>
 </div>
-{{#each data}}
-{{this}}
-<div class='card'>
-    {{this.id}}
-    {{this.product_name}}
-    {{this.product_description}}
+<div>
+    {{#each Products}}
+    <li>{{this.product_name}}</li>
+    {{/each}}
 </div>
-{{/each}}
-
 <div class="row" id="product-row-1">
     <!-- we're gonna have 4 products so each column will be 3 units wide -->
     <!-- dynamically generate product html using JS-->
