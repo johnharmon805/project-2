@@ -16,8 +16,10 @@ module.exports = function (app) {
     res.render('cart')
   })
 
+  app.get('/')
+
   app.get('/shop', function (req, res) {
-    db.Products.findAll({}).then((data) =>{
+    db.Products.findAll({}).then((data) => {
       res.render('shop', { Products: data })
       console.log(data)
     })
