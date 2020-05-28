@@ -16,14 +16,15 @@ app.use(express.static('public'))
 app.engine(
   'handlebars',
   exphbs({
-    defaultLayout: 'main'
+    defaultLayout: 'main' + '/views/layouts',
+    partialDir: '/views/partials'
   })
 )
 app.set('view engine', 'handlebars')
 
 // Routes
 require('./routes/apiRoutes')(app)
-require('./routes/htmlRoutes')(app)
+//require('./routes/htmlRoutes')(app)
 
 var syncOptions = { force: false }
 
