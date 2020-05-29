@@ -9,10 +9,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
+                            <a class="nav-link" href="/shop">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">View Cart</a>
@@ -25,6 +25,7 @@
 
 <ul>
     {{#each Products}}
+    <img src="/styles/Images/{{this.dataValues.image_url}}"></img>
     <p>{{this.dataValues.product_name}}</p>
     <p>{{this.dataValues.price}}.00</p>
     <button type="button" id="addtocart" class="btn btn-success">Add to Cart</button>
