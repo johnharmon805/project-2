@@ -9,10 +9,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/shop">Shop</a>
+                            <a class="nav-link" href="/shop">Shop<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">View Cart</a>
@@ -23,14 +23,21 @@
         </div>
     </div>
 
-<ul id='productId'>
-    {{#each Products}}
-    <li id={{this.dataValues.id}} value="{{this.dataValues.product_name}}" price={{this.dataValues.price}}>
-    {{!-- <img src="/styles/Images/{{this.dataValues.image_url}}"></img> --}}
-    <p>{{this.dataValues.product_name}}</p>
-    <p>{{this.dataValues.price}}.00</p>
-    <a href="/product/{{this.dataValues.id}}"><button type="button" id="viewdetails" class="btn btn-dark">View Detials</button><a>
-    <button type="button" class="addCart btn btn-success">Add to Cart</button>
-    </li>
-    {{/each}}
-</ul>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"> 
+        <ul id= "productId">
+            {{#each Products}}
+            <li id={{this.dataValues.id}} value="{{this.dataValues.product_name}}" price={{this.dataValues.price}}>
+            <img src="/styles/Images/{{this.dataValues.image_url}}" class="shopImages"></img>
+            <a href="/product/"{{this.dataValues.id}}><button type="button" id="viewdetails" class="btn btn-dark">View Details</button></a>
+            <p id = "shop-name">{{this.dataValues.product_name}}</p>
+            <p id = "shop-price">${{this.dataValues.price}}.99</p>
+            <button type="button" id="shop-add-to-cart" id={{this.dataValues.id}} class="btn btn-success">Add to Cart</button>
+            </li>
+            {{/each}}
+        </ul>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>

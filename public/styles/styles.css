@@ -1,6 +1,6 @@
 :root {
     --darkGreen: rgb(100, 156, 35);
-    --lightGreen: rgb(166, 219, 106);
+    --lightGreen: rgb(202, 231, 169);
     --lightGrey: rgb(218, 218, 218);
     --darkGrey: #333333;
 }
@@ -74,4 +74,46 @@ feel free to change the shades
 
 #success {
     margin-top: 50px;
+}
+
+.shopImages {
+    width: 350px;
+    height: 350px;
+    margin-top: 15%;
+    border-radius: 5px;
+}
+
+#viewdetails {
+    opacity: 40%;
+    background-color: white;
+    color: black;
+    width: 350px;
+    padding: 20px 0px;
+    margin-top: -85px;
+    border-color: white;
+    border-radius: 0;
+}
+
+#viewdetails:hover {
+    opacity: 80%;
+    width: 350px;
+}
+
+#shop-add-to-cart {
+    background-color: rgb(202, 231, 169);
+    border-color: rgb(202, 231, 169);
+    color: black;
+}
+
+#shop-name {
+    margin-top: -10px;
+    ;
+    font-size: 160%;
+}
+
+#shop-price {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: -15px;
+    margin-bottom: 15px;
 }
