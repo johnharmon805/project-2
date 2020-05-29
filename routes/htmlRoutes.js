@@ -11,12 +11,19 @@ module.exports = function (app) {
     })
   })
 
+  app.get('/home', function (req, res) {
+    db.Products.findAll({}).then(function (dbExamples) {
+      res.render('home', {
+        msg: 'Welcome!',
+        examples: dbExamples
+      })
+    })
+  })
+
   // Cart Page
   app.get('/cart', function (req, res) {
     res.render('cart')
   })
-
-  app.get('/')
 
   app.get('/shop', function (req, res) {
     db.Products.findAll({}).then((data) => {
@@ -34,7 +41,7 @@ module.exports = function (app) {
   })
 
   // Render 404 page for any unmatched routes
-  app.get('*', function (req, res) {
-    res.render('404')
-  })
+  // app.get('*', function (req, res) {
+  //   res.render('404')
+  // })
 }

@@ -97,3 +97,25 @@ var handleDeleteBtnClick = function () {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on('click', handleFormSubmit)
 $exampleList.on('click', '.delete', handleDeleteBtnClick)
+
+var cartArray = []
+var cartPrice = []
+var calculatedCost
+const reducer = (a, b) => a + b
+
+$('#productId').on('click', 'li', function (event) {
+  event.preventDefault()
+  console.log('add to cart button was clicked')
+  var id = $(this).attr('id')
+  console.log('this is the id of the item we are adding', id)
+  var productName = $(this).attr('value')
+  console.log(productName)
+  var price = $(this).attr('price')
+
+  cartPrice.push(parseInt(price))
+  // this worked just console logged before
+  calculatedCost = cartPrice.reduce(reducer)
+  console.log(calculatedCost)
+  cartArray.push(productName)
+  console.log('items in cart: ', cartArray)
+})
