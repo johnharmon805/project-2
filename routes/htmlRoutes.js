@@ -19,6 +19,9 @@ module.exports = function(app) {
     // Purchase Success Page
     app.get('/success', function(req, res) {
         res.render('Purchase-Success')
+ 
+
+
     })
 
     app.get('/')
@@ -43,3 +46,4 @@ module.exports = function(app) {
         res.render('404')
     })
 }
+
