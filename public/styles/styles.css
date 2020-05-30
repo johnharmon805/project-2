@@ -56,7 +56,7 @@ feel free to change the shades
     height: 400px;
     width: 400px;
     margin-left: 800px;
-    margin-top: -300px;
+    margin-top: -275px;
 }
 
 #product-row-3 {
@@ -116,4 +116,12 @@ feel free to change the shades
     font-style: italic;
     margin-top: -15px;
     margin-bottom: 15px;
+}
+
+#carttitle {
+    margin-top: 50px;
+}
+
+element.style {
+    list-style: none;
 }
