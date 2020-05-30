@@ -1,4 +1,7 @@
 var db = require('../models')
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+const stripe = require('stripe')(stripeSecretKey)
+
 
 module.exports = function(app) {
     // Load index page
@@ -33,6 +36,7 @@ module.exports = function(app) {
     })
 
     app.post('/charge', (req, res) => {
+        console.log(req.body.amount)
         try {
             stripe.customers
                 .create({
@@ -42,10 +46,11 @@ module.exports = function(app) {
                 })
                 .then(customer =>
                     stripe.charges.create({
-                        amount: req.body.amount * 100,
-                        currencty: 'usd',
+                        amount: parseInt(req.body.amount) * 100,
+                        currency: 'usd',
                         customer: customer.id
                     })
+                
                 ).then(() => res.render('Purchase-Success'))
                 .catch(err => console.log(err))
         } catch (err) {

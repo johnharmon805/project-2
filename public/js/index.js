@@ -131,3 +131,13 @@ $('#view-cart').on('click', function(e) {
         calculatedCost
     })
 })
+
+// $('#submitpymt').on('click', function(event) {
+//     $.get('/Purchase-Success')
+//     //this needs work to reroute to purchase-success page
+//     // we may have to put this in the same handler in card.js - we'll ask our trusty instructors :)
+//     // my logic here is that ^^ if we do this re-route onclick, we're not necessarily doing the stripe payment auth
+//     // so after the stripe payment auth, in that same event handler in card.js, we could tag on a .then
+//     // to route us to the purchase-success page
+//     // so this might not be the most appropriate place for this
+// })
