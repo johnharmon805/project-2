@@ -15,7 +15,7 @@ feel free to change the shades
 }
 
 .footer {
-    background-color: (var(--darkGrey));
+    background-color: #333333;
     width: 100%;
     position: relative;
     padding: 20px;
@@ -24,7 +24,7 @@ feel free to change the shades
 }
 
 #copyright {
-    color: (var(--lightGrey));
+    color: lightgrey;
     padding-top: 20px;
     text-align: center;
     font-size: small;
@@ -124,4 +124,22 @@ feel free to change the shades
 
 element.style {
     list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+#checkoutbtn {
+    margin-top: 50px;
+}
+
+#paymentform {
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+#givemoney {
+    margin-top: 100px;
 }
