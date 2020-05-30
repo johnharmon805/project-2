@@ -35,13 +35,18 @@
             <p id = "cart-price">${{this.dataValues.price}}</p>
             <button type="button" id="remove-from-cart" id={{this.dataValues.id}} class="btn btn-secondary">Remove From Cart</button>
         {{/each}} --}}
-        </div>
-        <div id="cartdisplay">
+         <div id="cartimage"></div>
+         <div id="cartdisplay"></div>
+         <div id="costdisplay"></div>
+        <a href="/purchase">
+         <button class="btn btn-success" id="checkoutbtn">Checkout</button>
+         </a>
 
-        </div>
-        <div id="costdisplay"></div>
+<div class="col-md-3"></div>
+       
 <div class="col-md-3"></div>
 </div>
+
 
  <script>
         // By default display the content from localStorage
