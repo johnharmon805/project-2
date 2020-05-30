@@ -14,6 +14,18 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(express.static('public'))
 
+// stripes stuff
+const bodyParser = require('body-parser')
+const path = require('path')
+const stripe = require('stripe')(stripeSecretKey)
+// This will make our form data much more useful
+app.use(bodyParser.urlencoded({ extended: true }))
+
+// This will set express to render our views folder, then to render the files as normal html
+app.set('view engine', 'ejs')
+app.engine('html', require('ejs').renderFile)
+app.use(express.static(path.join(__dirname, './views')))
+
 // Handlebars
 app.engine(
   'handlebars',
