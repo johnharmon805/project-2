@@ -4,7 +4,7 @@ const elements = stripe.elements()
 // Create our card inputs
 var style = {
   base: {
-    color: "#fff"
+    color: '#fff'
   }
 }
 
@@ -30,7 +30,7 @@ form.addEventListener('submit', e => {
   e.preventDefault()
 
   stripe.createToken(card).then(res => {
-    if (res.error) errorEl.textContent = res.error.message;
+    if (res.error) errorEl.textContent = res.error.message
     else stripeTokenHandler(res.token)
   })
 })
