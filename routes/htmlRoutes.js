@@ -21,6 +21,7 @@ module.exports = function (app) {
         res.render('Purchase-Success')
     })
 
+
     app.get('/shop', function (req, res) {
         db.Products.findAll({}).then((data) => {
             res.render('shop', { Products: data })
@@ -36,30 +37,9 @@ module.exports = function (app) {
         })
     })
 
-    // STRIPES STUFF
-    app.post('/charge', (req, res) => {
-        try {
-        stripe.customers
-            .create({
-                name: req.body.name,
-                email: req.body.email,
-                source: req.body.stripeToken
-            })
-            .then(customer =>
-                stripe.charges.create({
-                    amount: req.body.amount * 100,
-                    currency: 'usd',
-                    customer: customer.id
-                })
-            )
-            .then(() => res.render('Purchase - Success'))
-            .catch(err => console.log(err))
-    } catch (err) {
-        res.send(err);
-    }
-})
+    // Render 404 page for any unmatched routes
+    app.get('*', function (req, res) {
+        res.render('404')
+    })
+}
 
-    // // Render 404 page for any unmatched routes
-    // app.get('*', function (req, res) {
-    //     res.render('404')
-    // })
