@@ -51,5 +51,7 @@
  <script>
         // By default display the content from localStorage
     $("#cartdisplay").text(localStorage.getItem("cartArray"));
-    $("#costdisplay").text(localStorage.getItem("calculatedCost"));
+    $("#costdisplay").text("$" + localStorage.getItem("calculatedCost") + ".00");
+    let cartImage = localStorage.getItem("cartImage")
+    $("#cartimage").html("<img style='height: 200px; width: 200px;' src='" + cartImage + "'>");
  </script>

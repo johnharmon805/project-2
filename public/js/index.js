@@ -100,6 +100,7 @@
 
 var cartArray = []
 var cartPrice = []
+var cartImage = []
 var calculatedCost
 const reducer = (a, b) => a + b
 
@@ -111,6 +112,8 @@ $('#productId').on('click', 'li', function(event) {
     var productName = $(this).attr('value')
     console.log(productName)
     var price = $(this).attr('price')
+    var image = $(this).attr('image')
+    cartImage.push(image)
 
     cartPrice.push(parseInt(price))
         // this worked just console logged before
@@ -124,11 +127,13 @@ $('#view-cart').on('click', function(e) {
     // e.preventDefault()
     localStorage.setItem("cartArray", cartArray);
     localStorage.setItem("calculatedCost", calculatedCost);
+    localStorage.setItem("cartImage", cartImage)
     // alert(cartArray)
 
     $.post('/cart', {
         cartArray,
-        calculatedCost
+        calculatedCost,
+        cartImage
     })
 })
 

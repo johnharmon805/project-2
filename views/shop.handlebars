@@ -28,7 +28,7 @@
         <div class="col-md-4"> 
         <ul id= "productId">
             {{#each Products}}
-            <li id={{this.dataValues.id}} value="{{this.dataValues.product_name}}" price={{this.dataValues.price}}>
+            <li id={{this.dataValues.id}} value="{{this.dataValues.product_name}}" price={{this.dataValues.price}} image="/styles/Images/{{this.dataValues.image_url}}">
             <img src="/styles/Images/{{this.dataValues.image_url}}" class="shopImages"></img>
             <a href="/product/"{{this.dataValues.id}}><button type="button" id="viewdetails" class="btn btn-dark">View Details</button></a>
             <p id = "shop-name">{{this.dataValues.product_name}}</p>
