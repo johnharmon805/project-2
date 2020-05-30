@@ -122,7 +122,8 @@ $('#productId').on('click', 'li', function(event) {
 
 $('#view-cart').on('click', function(e) {
     // e.preventDefault()
-
+    localStorage.setItem("cartArray", cartArray);
+    localStorage.setItem("calculatedCost", calculatedCost);
     // alert(cartArray)
 
     $.post('/cart', {
