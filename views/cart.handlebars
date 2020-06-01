@@ -35,9 +35,7 @@
             <p id = "cart-price">${{this.dataValues.price}}</p>
             <button type="button" id="remove-from-cart" id={{this.dataValues.id}} class="btn btn-secondary">Remove From Cart</button>
         {{/each}} --}}
-         <div id="cartimage"></div>
          <div id="cartdisplay"></div>
-         <div id="costdisplay"></div>
         <a href="/purchase">
          <button class="btn btn-success" id="checkoutbtn">Checkout</button>
          </a>
@@ -48,10 +46,21 @@
 </div>
 
 
- <script>
-        // By default display the content from localStorage
-    $("#cartdisplay").text(localStorage.getItem("cartArray"));
-    $("#costdisplay").text("$" + localStorage.getItem("calculatedCost") + ".00");
-    let cartImage = localStorage.getItem("cartImage")
-    $("#cartimage").html("<img style='height: 200px; width: 200px;' src='" + cartImage + "'>");
+<script>
+    // By default display the content from localStorage
+    let cartImage = JSON.parse(localStorage.getItem("cartImage"))
+    let getItem = JSON.parse(localStorage.getItem("cartArray"))
+    let itemPrice = JSON.parse(localStorage.getItem("cartPrice"))
+    let totalCost = JSON.parse(localStorage.getItem("calculatedCost"))
+    for (var i = 0; i < cartImage.length; i++) {
+        $("#cartdisplay").append("<br><img style='height: 200px; width: 200px;' src='" + cartImage[i] + "'><br>");
+        $("#cartdisplay").append(getItem[i]);
+        $("#cartdisplay").append("$" + itemPrice[i] + ".00");
+    }
+    if (totalCost != undefined) {
+        $("#cartdisplay").append("<br>Total Cost: $" + localStorage.getItem("calculatedCost") + ".00");
+    }
+    else {
+        $("#cartdisplay").append("Cart is Empty!")
+    }
  </script>
