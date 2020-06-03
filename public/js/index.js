@@ -125,9 +125,11 @@ $('#productId').on('click', 'li', function(event) {
 
 $('#view-cart').on('click', function(e) {
     // e.preventDefault()
-    localStorage.setItem("cartArray", cartArray);
+    console.log(cartPrice)
+    localStorage.setItem("cartPrice", JSON.stringify(cartPrice));
+    localStorage.setItem("cartArray", JSON.stringify(cartArray));
     localStorage.setItem("calculatedCost", calculatedCost);
-    localStorage.setItem("cartImage", cartImage)
+    localStorage.setItem("cartImage", JSON.stringify(cartImage))
     // alert(cartArray)
 
     $.post('/cart', {
