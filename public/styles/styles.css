@@ -22,7 +22,14 @@ feel free to change the shades
     bottom: 0px;
     margin-top: 100px;
 }
-
+.footer-home {
+    background-color: #333333;
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    margin-top: 100px;
+}
 #copyright {
     color: lightgrey;
     padding-top: 20px;

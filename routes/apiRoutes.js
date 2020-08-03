@@ -67,38 +67,34 @@ module.exports = function (app) {
     ]).then(function (products) {
       res.json(products)
     })
-
-    db.Users.bulkCreate([
-      {
-        name: 'Andrew',
-        username: 'andrew',
-        password: 'password'
-      },
-      {
-        name: 'Monica',
-        username: 'monica',
-        password: 'password'
-      },
-      {
-        name: 'Eliska',
-        username: 'eliska',
-        password: 'password'
-      },
-      {
-        name: 'John',
-        username: 'john',
-        password: 'password'
-      }
-    ]).then(function (users) {
-      res.json(users)
-    })
+    // For user authentication (nice to have)
+    // db.Users.bulkCreate([
+    //   {
+    //     name: 'Andrew',
+    //     username: 'andrew',
+    //     password: 'password'
+    //   },
+    //   {
+    //     name: 'Monica',
+    //     username: 'monica',
+    //     password: 'password'
+    //   },
+    //   {
+    //     name: 'Eliska',
+    //     username: 'eliska',
+    //     password: 'password'
+    //   },
+    //   {
+    //     name: 'John',
+    //     username: 'john',
+    //     password: 'password'
+    //   }
+    // ]).then(function (users) {
+    //   res.json(users)
+    // })
   })
 
-  app.get('/api/users', function (req, res) {
-    db.Users.findAll({}).then((users) => {
-      res.json(users)
-    })
-  })
+
 
   // Create a new example
   app.post('/api/products', function (req, res) {
@@ -106,12 +102,18 @@ module.exports = function (app) {
       res.json(newPost)
     })
   })
+  
+    // app.get('/api/users', function (req, res) {
+  //   db.Users.findAll({}).then((users) => {
+  //     res.json(users)
+  //   })
+  // })
 
-  app.post('/api/users', function (req, res) {
-    db.Users.create(req.body).then((newPost) => {
-      res.json(newPost)
-    })
-  })
+  // app.post('/api/users', function (req, res) {
+  //   db.Users.create(req.body).then((newPost) => {
+  //     res.json(newPost)
+  //   })
+  // })
 
   // Delete an example by id
   app.delete('/api/users/:id', function (req, res) {
